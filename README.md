@@ -26,8 +26,11 @@ git clone https://github.com/L0pezzz/EntregaWeb_-2
 cd EntregaWeb_-2
 
 3. Instalar dependencias
+
 Instalar el node
+
 npm install @mui/material @emotion/react @emotion/styled
+
 npm i react-router-dom
 
 o utilizar el npm install que instala todas las librerias necesarias
@@ -36,4 +39,4 @@ o utilizar el npm install que instala todas las librerias necesarias
 
 npm run dev
 
-5. Abrir en el navegador
+6. Abrir en el navegador
