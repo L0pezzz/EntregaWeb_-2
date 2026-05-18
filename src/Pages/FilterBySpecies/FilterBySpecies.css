@@ -1,0 +1,48 @@
+.filter-page {
+  padding: 20px;
+  background: radial-gradient(ellipse at top, #0d2137 0%, #0a0a1a 70%);
+  min-height: 80vh;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #00b4d8;
+  font-size: 1rem;
+  background-color: #1a1a2e; 
+  color: #ffffff;              
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-controls label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;              
+}
+
+.filter-select:focus {
+  border-color: #0077a3;
+}
+
+.status-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.status-message--error {
+  color: #e63946;
+}

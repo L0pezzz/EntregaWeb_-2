@@ -1,0 +1,222 @@
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  min-height: 85vh;
+  background: radial-gradient(ellipse at top, #0d2137 0%, #0a0a1a 70%);
+  overflow: hidden;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.home__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(0, 180, 100, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ── Contenido izquierdo ── */
+.home__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.home__badge {
+  background-color: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  color: #00b4d8;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home__title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(0, 180, 216, 0.4);
+}
+
+.home__title span {
+  color: #97ce4c;
+}
+
+.home__subtitle {
+  font-size: 1.05rem;
+  color: #8899aa;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.home__buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home__btn {
+  background-color: #97ce4c;
+  color: #0a0a1a;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.home__btn:hover {
+  background-color: #7eb83a;
+  transform: translateY(-3px);
+}
+
+.home__btn--secondary {
+  background-color: transparent;
+  border: 2px solid #00b4d8;
+  color: #00b4d8;
+}
+
+.home__btn--secondary:hover {
+  background-color: #00b4d8;
+  color: #0a0a1a;
+  transform: translateY(-3px);
+}
+
+/* ── Tarjeta del desarrollador ── */
+.home__developer {
+  position: relative;
+  z-index: 2;
+}
+
+.home__developer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 20px;
+  padding: 28px 32px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(151, 206, 76, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 280px;
+}
+
+.home__developer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 180, 216, 0.2);
+}
+
+.home__developer-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid #97ce4c;
+  box-shadow: 0 0 20px rgba(151, 206, 76, 0.4);
+}
+
+.home__developer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.home__developer-badge {
+  background-color: rgba(151, 206, 76, 0.15);
+  border: 1px solid rgba(151, 206, 76, 0.4);
+  color: #97ce4c;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home__developer-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+.home__developer-detail {
+  font-size: 0.85rem;
+  color: #8899aa;
+}
+
+/* ── Portal decorativo ── */
+.home__portal {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  width: 420px;
+  opacity: 0.12;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.home__portal img {
+  width: 100%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(3deg); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .home__title {
+    font-size: 2.8rem;
+  }
+
+  .home__portal {
+    width: 260px;
+    right: -40px;
+    bottom: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__title {
+    font-size: 2.2rem;
+  }
+
+  .home__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home__btn {
+    text-align: center;
+  }
+
+  .home__portal {
+    display: none;
+  }
+}
